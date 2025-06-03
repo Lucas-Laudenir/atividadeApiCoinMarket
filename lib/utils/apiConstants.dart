@@ -1,0 +1,35 @@
+const defaultSymbols = [
+  'BTC',
+  'ETH',
+  'SOL',
+  'BNB',
+  'BCH',
+  'MKR',
+  'AAVE',
+  'DOT',
+  'SUI',
+  'ADA',
+  'XRP',
+  'TIA',
+  'NEO',
+  'NEAR',
+  'PENDLE',
+  'RENDER',
+  'LINK',
+  'TON',
+  'XAI',
+  'SEI',
+  'IMX',
+  'ETHFI',
+  'UMA',
+  'SUPER',
+  'FET',
+  'USUAL',
+  'GALA',
+  'PAAL',
+  'AERO',
+];
+
+class ApiConstants {
+  static const String apiKey = 'f0dde561-8e48-4aab-8923-13a870d4fdf7';
+}
