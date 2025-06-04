@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CryptoSearchBar extends StatelessWidget {
+class CryptoBar extends StatelessWidget {
   final TextEditingController controller;
   final Function(String) onSearch;
 
-  const CryptoSearchBar({
+  const CryptoBar({
     required this.controller,
     required this.onSearch,
     super.key,

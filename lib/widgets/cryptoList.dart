@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../models/cryptocurrency.dart';
-import 'cryptoDetailSheet.dart';
+import '../models/cryptoMoeda.dart';
+import 'cryptoDetail.dart';
 
 class CryptoList extends StatelessWidget {
-  final List<Cryptocurrency> cryptos;
+  final List<cryptoMoeda> cryptos;
 
   const CryptoList({super.key, required this.cryptos});
 
@@ -65,7 +65,7 @@ class CryptoList extends StatelessWidget {
                   borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
                 ),
                 isScrollControlled: true,
-                builder: (_) => CryptoDetailSheet(crypto: crypto),
+                builder: (_) => CryptoDetail(crypto: crypto),
               );
             },
           ),

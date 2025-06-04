@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
-import '../models/cryptocurrency.dart';
+import '../models/cryptoMoeda.dart';
 import '../repositories/cryptoRepository.dart';
 
 class HomeViewModel extends ChangeNotifier {
   final CryptoRepository repository;
-  List<Cryptocurrency> _cryptos = [];
+  List<cryptoMoeda> _cryptos = [];
   bool _isLoading = false;
 
-  List<Cryptocurrency> get cryptos => _cryptos;
+  List<cryptoMoeda> get cryptos => _cryptos;
   bool get isLoading => _isLoading;
 
   HomeViewModel(this.repository);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../viewmodels/homeViewmodel.dart';
-import '../widgets/cryptoSearchBar.dart';
+import '../widgets/cryptoBar.dart';
 import '../widgets/cryptoList.dart';
 
 class HomeView extends StatefulWidget {
@@ -27,7 +27,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: AppBar(title: Text('Criptomoedas')),
       body: Column(
         children: [
-          CryptoSearchBar(controller: _controller, onSearch: vm.fetchCryptos),
+          CryptoBar(controller: _controller, onSearch: vm.fetchCryptos),
           Expanded(
             child: vm.isLoading
                 ? Center(child: CircularProgressIndicator())

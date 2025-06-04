@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../models/cryptocurrency.dart';
+import '../models/cryptoMoeda.dart';
 
-class CryptoDetailSheet extends StatelessWidget {
-  final Cryptocurrency crypto;
+class CryptoDetail extends StatelessWidget {
+  final cryptoMoeda crypto;
 
-  const CryptoDetailSheet({super.key, required this.crypto});
+  const CryptoDetail({super.key, required this.crypto});
 
   @override
   Widget build(BuildContext context) {

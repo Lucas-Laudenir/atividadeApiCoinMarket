@@ -1,11 +1,11 @@
-class Cryptocurrency {
+class cryptoMoeda {
   final String name;
   final String symbol;
   final DateTime dateAdded;
   final double priceUsd;
   double? priceBrl;
 
-  Cryptocurrency({
+  cryptoMoeda({
     required this.name,
     required this.symbol,
     required this.dateAdded,
@@ -13,8 +13,8 @@ class Cryptocurrency {
     this.priceBrl,
   });
 
-  factory Cryptocurrency.fromJson(Map<String, dynamic> json, {required String currency}) {
-    return Cryptocurrency(
+  factory cryptoMoeda.fromJson(Map<String, dynamic> json, {required String currency}) {
+    return cryptoMoeda(
       name: json['name'] ?? '',
       symbol: json['symbol'] ?? '',
       dateAdded: DateTime.tryParse(json['date_added'] ?? '') ?? DateTime.now(),

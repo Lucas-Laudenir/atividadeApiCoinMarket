@@ -1,15 +1,15 @@
 import 'dart:convert';
-import '../models/cryptocurrency.dart';
+import '../models/cryptoMoeda.dart';
 import '../datasources/coinmarketcapDatasource.dart';
 
 class CryptoRepository {
-  Future<List<Cryptocurrency>> getCryptosBySymbols(List<String> symbols) async {
+  Future<List<cryptoMoeda>> getCryptosBySymbols(List<String> symbols) async {
     final response = await fetchCryptocurrenciesBySymbols(symbols, convert: 'USD');
     if (response.statusCode == 200) {
       final Map<String, dynamic> data = json.decode(response.body)['data'];
       final cryptos = data.entries.map((e) {
         final value = e.value as Map<String, dynamic>;
-        return Cryptocurrency.fromJson(value, currency: 'USD');
+        return cryptoMoeda.fromJson(value, currency: 'USD');
       }).toList();
       return cryptos;
     } else {
@@ -17,7 +17,7 @@ class CryptoRepository {
     }
   }
 
-  Future<void> updateCryptosWithBrl(List<Cryptocurrency> cryptos) async {
+  Future<void> updateCryptosWithBrl(List<cryptoMoeda> cryptos) async {
     final symbols = cryptos.map((c) => c.symbol).toList();
     final response = await fetchCryptocurrenciesBySymbols(symbols, convert: 'BRL');
     if (response.statusCode == 200) {
